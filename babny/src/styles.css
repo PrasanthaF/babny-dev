@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    font-family: 'Open Sans', sans-serif
+}
+
+header, footer{
+    background-color: #333;
+    color: #ddd;
+    padding: 20px;
+    text-align: center;    
+}
+
+aside{
+    background-color: #f7f7f7;
+    text-align: center;
+    padding-top: 40px;
+}
