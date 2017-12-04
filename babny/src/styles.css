@@ -1,8 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 
 body {
-    font-family: 'Open Sans', sans-serif
+    font-family: 'Open Sans', sans-serif;
 }
+
+/* .navbar {
+    margin-bottom: 0px;
+    padding: 30px 15px;
+} */
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #bbb;
+}
+
+/* .navbar img {
+    width: 90%;
+    height: 90%;
+} */
 
 header,
 footer {
