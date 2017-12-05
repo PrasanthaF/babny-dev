@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 body {
-    font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 
@@ -10,14 +10,24 @@ body {
     padding: 30px 15px;
 } */
 
-.navbar-inverse .navbar-nav>li>a {
-    color: #bbb;
+@media (max-width: 400px) {
+  .navbar-header {
+    position: relative;
+  }
+  .navbar img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 70%;
+  }
 }
 
-.cbp-af-header-shrink {
-    padding-top: 5px;
-    padding-bottom: 5px;
+.navbar-inverse .navbar-nav>li>a {
+  color: #bbb;
 }
+
+
 
 
 /* .navbar img {
@@ -25,16 +35,15 @@ body {
     height: 90%;
 } */
 
-header,
 footer {
-    background-color: #333;
-    color: #ddd;
-    padding: 20px;
-    text-align: center;
+  background-color: #333;
+  color: #ddd;
+  padding: 20px;
+  text-align: center;
 }
 
 aside {
-    background-color: #f7f7f7;
-    text-align: center;
-    padding-top: 40px;
+  background-color: #f7f7f7;
+  text-align: center;
+  padding-top: 40px;
 }
