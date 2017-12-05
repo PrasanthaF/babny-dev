@@ -1,7 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
 body {
-  font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 30px;
 }
 
 
@@ -11,23 +12,27 @@ body {
 } */
 
 @media (max-width: 400px) {
-  .navbar-header {
-    position: relative;
-  }
-  .navbar img {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    width: 70%;
-  }
+    .navbar-header {
+        position: relative;
+    }
+    .navbar img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 70%;
+    }
+}
+
+.img-responsive {
+    margin: 0px auto;
+    border: 3px solid darkgray;
+    box-shadow: rgba(0, 0, 0, 0.5) 10px 10px 10px;
 }
 
 .navbar-inverse .navbar-nav>li>a {
-  color: #bbb;
+    color: #bbb;
 }
-
-
 
 
 /* .navbar img {
@@ -36,14 +41,14 @@ body {
 } */
 
 footer {
-  background-color: #333;
-  color: #ddd;
-  padding: 20px;
-  text-align: center;
+    background-color: #333;
+    color: #ddd;
+    padding: 20px;
+    text-align: center;
 }
 
 aside {
-  background-color: #f7f7f7;
-  text-align: center;
-  padding-top: 40px;
+    background-color: #f7f7f7;
+    text-align: center;
+    /* padding-top: 40px; */
 }
