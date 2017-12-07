@@ -1,0 +1,12 @@
+#sidenav, #sidenav-mini {
+    height: 100%;
+    position: fixed;
+    top: 60px;
+    padding-left: 0px;
+    padding-top: 1em;
+    /* background-color: #2D353C !important; */
+  }
+
+  #sidegutter {
+    width: 340px;
+  }
