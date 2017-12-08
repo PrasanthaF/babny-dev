@@ -15,52 +15,49 @@ const DEFAULT_COLORS = ['#3366CC', '#DC3912', '#FF9900', '#109618', '#990099',
 
 export class BabnyChartPieComponent implements OnInit {
 
-  hoursByProjectChartData: any;
-  hoursByProject: any;
+  hoursByProject = [
+    { id: 1, name: 'Payroll App', hoursSpent: 8 },
+    { id: 2, name: 'Agile Times App', hoursSpent: 16 },
+    { id: 3, name: 'Point of Sale App', hoursSpent: 24 },
+  ];
 
-  pieLabels: any;
-  pieData: any;
-  pieColors: any;
+  pieLabels = this.hoursByProject.map((proj) => proj.name);
+
+  pieData = this.hoursByProject.map((proj) => proj.hoursSpent);
+
+  pieColors = this.configureDefaultColours(this.pieData);
+
+  private configureDefaultColours(data: number[]): string[] {
+
+    let customColors = [];
+    if (data.length) {
+      customColors = data.map((element, idx) => {
+        return DEFAULT_COLORS[idx % DEFAULT_COLORS.length];
+      });
+    }
+
+    return customColors;
+  }
+
+  // tslint:disable-next-line:member-ordering
+  hoursByProjectChartData = {
+    labels: this.pieLabels,
+    datasets: [
+      {
+        data: this.pieData,
+        backgroundColor: this.pieColors
+      }
+    ]
+  };
 
   constructor() { }
 
   ngOnInit() {
+  }
 
-    this.hoursByProject = [
-      { id: 1, name: 'Payroll App', hoursSpent: 8 },
-      { id: 2, name: 'Agile Times App', hoursSpent: 16 },
-      { id: 3, name: 'Point of Sale App', hoursSpent: 24 },
-    ];
-
-    this.pieLabels = this.hoursByProject.map((proj) => proj.name);
-
-    this.pieData = this.hoursByProject.map((proj) => proj.hoursSpent);
-
-    this.pieColors = this.configureDefaultColours(this.pieData);
-
-    this.hoursByProjectChartData = {
-      labels: this.pieLabels,
-      datasets: [
-        {
-          data: this.pieData,
-          backgroundColor: this.pieColors
-        }
-      ]
-    };
+  // tslint:disable-next-line:member-ordering
 
 
 
-}
 
-private configureDefaultColours(data: number[]): string[] {
-
-      let customColors = [];
-      if (data.length) {
-        customColors = data.map((element, idx) => {
-            return DEFAULT_COLORS[idx % DEFAULT_COLORS.length];
-        });
-      }
-
-      return customColors;
-    }
 }

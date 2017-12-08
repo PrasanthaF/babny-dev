@@ -9,7 +9,7 @@ import { BabnyHomeComponent } from './babny/babny-home/babny-home.component';
 import { BabnyFooterComponent } from './babny/babny-footer/babny-footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import {MenuModule, PanelModule, ChartModule  } from 'primeng/primeng';
+import {MenuModule, PanelModule, ChartModule, InputTextModule  } from 'primeng/primeng';
 import { BabnySideMenuComponent } from './babny/babny-side-menu/babny-side-menu.component';
 import { BabnyChartPieComponent } from './babny/babny-chart-pie/babny-chart-pie.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -33,7 +33,8 @@ import { BabnyAddNameComponent } from './babny/Name/babny-add-name.component';
     BrowserAnimationsModule,
     MenuModule,
     PanelModule,
-    ChartModule
+    ChartModule,
+    InputTextModule
   ],
   providers: [],
   bootstrap: [AppComponent]

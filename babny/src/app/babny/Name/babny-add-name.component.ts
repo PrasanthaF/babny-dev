@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Validators, FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'babny-add-name',
@@ -8,9 +9,14 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class BabnyAddNameComponent implements OnInit {
 
-  constructor() { }
+  projectForm: FormGroup;
+
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
+    this.projectForm = this.fb.group({
+      projectId: ['', [Validators.required, Validators.minLength(5)]]
+    });
   }
 
 }
