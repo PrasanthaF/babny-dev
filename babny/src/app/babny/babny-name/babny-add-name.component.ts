@@ -10,6 +10,7 @@ import { Validators, FormGroup, FormBuilder } from '@angular/forms';
 export class BabnyAddNameComponent implements OnInit {
 
   projectForm: FormGroup;
+  minStartDate = new Date();
 
   constructor(private fb: FormBuilder) { }
 
@@ -17,7 +18,9 @@ export class BabnyAddNameComponent implements OnInit {
     this.projectForm = this.fb.group({
       projectId: ['', [Validators.required, Validators.minLength(5)]],
       description: ['Baby Name', [Validators.required,
-      Validators.maxLength(140)]]
+      Validators.maxLength(140)]],
+      startDate: [new Date(), Validators.required],
+      projectType: ['B']
     });
   }
 

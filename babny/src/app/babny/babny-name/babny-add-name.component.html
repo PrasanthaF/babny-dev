@@ -14,11 +14,27 @@
 
     <section class="ui-g">
       <label for="description" class="ui-g-12">Description</label>
-      <textarea pInputTextarea id="description" rows="10" formControlName="description" class="ui-g-12"></textarea>
-
+      <!-- <textarea pInputTextarea id="description" rows="10" formControlName="description" class="ui-g-12"></textarea> -->
+      <p-editor id="description" class="ui-g-12" formControlName="description" [style]="{'height': '200px'}"></p-editor>
       <div class="ui-g-12">
         <babny-fielderrors [form]="projectForm" field="description" nicename="Description"> </babny-fielderrors>
       </div>
+    </section>
+
+    <section class="ui-g">
+      <label for="startDate" class="ui-g-12 ui-md-2">Start Date</label>
+      <p-calendar [showIcon]="true" id="startDate" formControlName="startDate" dateFormat="mm/dd/yy" class="ui-g-12 ui-md-5" [minDate]="minStartDate">
+      </p-calendar>
+
+      <div class="ui-g-12 ui-md-5">
+        <babny-fielderrors [form]="projectForm" field="startDate" nicename="Start Date"> </babny-fielderrors>
+      </div>
+    </section>
+
+    <section class="ui-g">
+      <p-radioButton name="projGroup" label="Front End" value="F" formControlName="projectType"></p-radioButton>
+      <p-radioButton name="projGroup" label="Backend End" value="B" formControlName="projectType"></p-radioButton>
+      <p-radioButton name="projGroup" label="Operations" value="O" formControlName="projectType"></p-radioButton>
     </section>
 
     <section class="ui-g">
