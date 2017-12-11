@@ -32,9 +32,17 @@
     </section>
 
     <section class="ui-g">
-      <p-radioButton name="projGroup" label="Front End" value="F" formControlName="projectType"></p-radioButton>
-      <p-radioButton name="projGroup" label="Backend End" value="B" formControlName="projectType"></p-radioButton>
-      <p-radioButton name="projGroup" label="Operations" value="O" formControlName="projectType"></p-radioButton>
+      <p-fieldset legend="Project Type" class="ui-g-12" [toggleable]="true" [collapsed]="false">
+        <p-radioButton name="projGroup" label="Front End" value="F" formControlName="projectType"></p-radioButton>
+        <p-radioButton name="projGroup" label="Backend End" value="B" formControlName="projectType"></p-radioButton>
+        <p-radioButton name="projGroup" label="Operations" value="O" formControlName="projectType"></p-radioButton>
+      </p-fieldset>
+    </section>
+
+    <section class="ui-g">
+      <label for="devs" class="ui-g-12 ui-md-2">Assigned Devs</label>
+      <p-dropdown id="devs" filter="true" [options]="allDevs" formControlName="selectedDevs" class="ui-g-12 ui-md-10">
+      </p-dropdown>
     </section>
 
     <section class="ui-g">

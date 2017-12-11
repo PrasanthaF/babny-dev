@@ -12,6 +12,18 @@ export class BabnyAddNameComponent implements OnInit {
   projectForm: FormGroup;
   minStartDate = new Date();
 
+  allDevs = [
+    { label: 'Jill', value: 'Jill Cool' },
+    { label: 'Joe', value: 'Joe Cool' },
+    { label: 'Mary', value: 'Mary Cool' },
+    { label: 'Susan', value: 'Susan Jones' },
+    { label: 'Phil', value: 'Phil Stephens' },
+    { label: 'Karen', value: 'Karen Phillips' },
+    { label: 'Chris', value: 'Chris Hampton' },
+    { label: 'Si', value: 'Si Chew' },
+    { label: 'Terri', value: 'Terri Smith' }
+
+  ];
   constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
@@ -20,7 +32,8 @@ export class BabnyAddNameComponent implements OnInit {
       description: ['Baby Name', [Validators.required,
       Validators.maxLength(140)]],
       startDate: [new Date(), Validators.required],
-      projectType: ['B']
+      projectType: ['B'],
+      selectedDevs: ['']
     });
   }
 
