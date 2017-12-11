@@ -1,8 +1,28 @@
-<form [formGroup]="projectForm" class="ui-g">
+<form [formGroup]="projectForm" class="ui-g" (ngSubmit)="onSubmit()">
   <p-panel header="Add Name" class="ui-g-12">
 
-<section class="ui-g">
-  <label for="projectId" class="ui-g-12 ui-md-2">Project Id*</label>
-</section>
+    <section class="ui-g">
+      <label for="projectId" class="ui-g-12 ui-md-2">Project Id*</label>
+
+      <input pInputText id="projectId" formControlName="projectId" placeholder="Enter Your Project Id" class="ui-g-12 ui-md-5"
+      />
+
+      <div class="ui-g-12 ui-md-5">
+        <babny-fielderrors [form]="projectForm" field="projectId" nicename="Project ID"></babny-fielderrors>
+      </div>
+    </section>
+
+    <section class="ui-g">
+      <label for="description" class="ui-g-12">Description</label>
+      <textarea pInputTextarea id="description" rows="10" formControlName="description" class="ui-g-12"></textarea>
+
+      <div class="ui-g-12">
+        <babny-fielderrors [form]="projectForm" field="description" nicename="Description"> </babny-fielderrors>
+      </div>
+    </section>
+
+    <section class="ui-g">
+      <button pButton type="submit" [disabled]="hasFormErrors()" label="Save" icon="fa-floppy-o"></button>
+    </section>
   </p-panel>
 </form>

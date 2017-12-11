@@ -15,8 +15,18 @@ export class BabnyAddNameComponent implements OnInit {
 
   ngOnInit() {
     this.projectForm = this.fb.group({
-      projectId: ['', [Validators.required, Validators.minLength(5)]]
+      projectId: ['', [Validators.required, Validators.minLength(5)]],
+      description: ['Baby Name', [Validators.required,
+      Validators.maxLength(140)]]
     });
+  }
+
+  hasFormErrors() {
+    return !this.projectForm.valid;
+  }
+
+  onSubmit() {
+    alert(JSON.stringify(this.projectForm.value));
   }
 
 }
