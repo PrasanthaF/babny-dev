@@ -13,7 +13,7 @@ import {MenuModule, PanelModule, ChartModule, InputTextModule  } from 'primeng/p
 import { BabnySideMenuComponent } from './babny/babny-side-menu/babny-side-menu.component';
 import { BabnyChartPieComponent } from './babny/babny-chart-pie/babny-chart-pie.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BabnyAddNameComponent } from './babny/Name/babny-add-name.component';
+import { BabnyAddNameComponent } from './babny/babny-name/babny-add-name.component';
 
 @NgModule({
   declarations: [
