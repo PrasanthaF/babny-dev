@@ -33,7 +33,9 @@ export class BabnyAddNameComponent implements OnInit {
       Validators.maxLength(140)]],
       startDate: [new Date(), Validators.required],
       projectType: ['B'],
-      selectedDevs: ['']
+      selectedDevs: [''],
+      selectedMultiDevs: [[]],
+      selectedListDevs: [[]]
     });
   }
 

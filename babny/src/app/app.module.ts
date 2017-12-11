@@ -11,7 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {
   MenuModule, PanelModule, ChartModule, InputTextModule, ButtonModule,
-  InputMaskModule, InputTextareaModule, EditorModule, CalendarModule, RadioButtonModule, FieldsetModule, DropdownModule
+  InputMaskModule, InputTextareaModule, EditorModule, CalendarModule, RadioButtonModule, FieldsetModule, DropdownModule, MultiSelectModule, ListboxModule
 } from 'primeng/primeng';
 import { BabnySideMenuComponent } from './babny/babny-side-menu/babny-side-menu.component';
 import { BabnyChartPieComponent } from './babny/babny-chart-pie/babny-chart-pie.component';
@@ -47,7 +47,9 @@ import { BabnyFielderrorsComponent } from './babny/babny-fielderrors/babny-field
     CalendarModule,
     RadioButtonModule,
     FieldsetModule,
-    DropdownModule
+    DropdownModule,
+    MultiSelectModule,
+    ListboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
