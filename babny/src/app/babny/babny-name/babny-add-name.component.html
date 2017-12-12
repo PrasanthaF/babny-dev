@@ -47,18 +47,23 @@
 
     <section class="ui-g">
       <label for="devs" class="ui-g-12 ui-md-2">Multi Select Assigned Devs</label>
-      <p-multiSelect id="devmultiselect" [options]="allDevs" defaultLabel="Select a Dev or Two" formControlName="selectedMultiDevs" class="ui-g-12 ui-md-10">
+      <p-multiSelect id="devmultiselect" [options]="allDevs" defaultLabel="Select a Dev or Two" formControlName="selectedMultiDevs"
+        class="ui-g-12 ui-md-10">
       </p-multiSelect>
     </section>
 
     <section class="ui-g">
-        <label for="devs" class="ui-g-12 ui-md-2">ListBox Assigned Devs</label>
-        <p-listbox id="devlistselect" [options]="allDevs" [multiple]="true" formControlName="selectedListDevs" class="ui-g-12 ui-md-10">
-        </p-listbox>
-      </section>
-
-    <section class="ui-g">
-      <button pButton type="submit" [disabled]="hasFormErrors()" label="Save" icon="fa-floppy-o"></button>
+      <label for="devs" class="ui-g-12 ui-md-2">ListBox Assigned Devs</label>
+      <p-listbox id="devlistselect" [options]="allDevs" [multiple]="true" formControlName="selectedListDevs" class="ui-g-12 ui-md-10">
+        <ng-template let-dev pTemplate="item">
+          <img src="http://i.pravatar.cc/100?u={{dev.label}}" class="avatar" />
+          <span class="devName">{{dev.value}}</span>
+        </ng-template>
+      </p-listbox>
     </section>
+
+    
+      <button pButton type="submit" [disabled]="hasFormErrors()" label="Save" icon="fa-floppy-o"></button>
+   
   </p-panel>
 </form>
