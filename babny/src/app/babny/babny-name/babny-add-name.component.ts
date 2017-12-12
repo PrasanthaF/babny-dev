@@ -35,7 +35,8 @@ export class BabnyAddNameComponent implements OnInit {
       projectType: ['B'],
       selectedDevs: [''],
       selectedMultiDevs: [[]],
-      selectedListDevs: [[]]
+      selectedListDevs: [[]],
+      rating: 3
     });
   }
 

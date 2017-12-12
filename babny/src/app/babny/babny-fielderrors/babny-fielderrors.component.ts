@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 
 import { FormGroup } from '@angular/forms';
+import { FormControlName } from '@angular/forms/src/directives/reactive_directives/form_control_name';
 
 
 @Component({

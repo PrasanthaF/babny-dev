@@ -61,8 +61,12 @@
         </ng-template>
       </p-listbox>
     </section>
-
     
+    <div class="ui-g">
+        <label for="rating" class="ui-g-12 ui-md-2">Name rating</label>
+        <p-rating id="slider" formControlName="rating" class="ui-g-12 ui-md-5" [cancel]="false"></p-rating>
+      </div>
+
       <button pButton type="submit" [disabled]="hasFormErrors()" label="Save" icon="fa-floppy-o"></button>
    
   </p-panel>

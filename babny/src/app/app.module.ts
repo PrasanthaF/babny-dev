@@ -11,13 +11,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {
   MenuModule, PanelModule, ChartModule, InputTextModule, ButtonModule,
-  InputMaskModule, InputTextareaModule, EditorModule, CalendarModule, RadioButtonModule, FieldsetModule, DropdownModule, MultiSelectModule, ListboxModule
+  InputMaskModule, InputTextareaModule, EditorModule, CalendarModule, RadioButtonModule, FieldsetModule,
+  DropdownModule, MultiSelectModule, ListboxModule, SliderModule, RatingModule
 } from 'primeng/primeng';
 import { BabnySideMenuComponent } from './babny/babny-side-menu/babny-side-menu.component';
 import { BabnyChartPieComponent } from './babny/babny-chart-pie/babny-chart-pie.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BabnyAddNameComponent } from './babny/babny-name/babny-add-name.component';
 import { BabnyFielderrorsComponent } from './babny/babny-fielderrors/babny-fielderrors.component';
+import { BabnySliderComponent } from './babny/widgets/babny-slider/babny-slider.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { BabnyFielderrorsComponent } from './babny/babny-fielderrors/babny-field
     BabnySideMenuComponent,
     BabnyChartPieComponent,
     BabnyAddNameComponent,
-    BabnyFielderrorsComponent
+    BabnyFielderrorsComponent,
+    BabnySliderComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +52,9 @@ import { BabnyFielderrorsComponent } from './babny/babny-fielderrors/babny-field
     FieldsetModule,
     DropdownModule,
     MultiSelectModule,
-    ListboxModule
+    ListboxModule,
+    SliderModule,
+    RatingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
