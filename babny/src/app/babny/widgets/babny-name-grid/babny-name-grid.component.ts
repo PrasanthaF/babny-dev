@@ -10,6 +10,8 @@ export class BabnyNameGridComponent implements OnInit {
 
   selectedRows: Array<any>;
 
+  recordCount: number;
+
   allTimesheetData = [
 
     { user: 'Glen', project: 'Payroll App', category: 'Backend', startTime: 1000, endTime: 1700, date: 1434243 },
@@ -25,13 +27,18 @@ export class BabnyNameGridComponent implements OnInit {
     return { label: proj, value: proj };
   });
 
-  constructor() { }
+  constructor() {
+    for (let x = 0; x < 5; x++) {
+      this.allTimesheetData = this.allTimesheetData.concat(this.allTimesheetData);
+    }
+    this.recordCount = this.allTimesheetData.length;
+  }
 
   ngOnInit() {
   }
 
   onRowSelect(rowInfo) {
-   // alert(JSON.stringify(rowInfo.data));
+    // alert(JSON.stringify(rowInfo.data));
   }
 
 }
