@@ -12,7 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MenuModule, PanelModule, ChartModule, InputTextModule, ButtonModule,
   InputMaskModule, InputTextareaModule, EditorModule, CalendarModule, RadioButtonModule, FieldsetModule,
-  DropdownModule, MultiSelectModule, ListboxModule, SliderModule, RatingModule
+  DropdownModule, MultiSelectModule, ListboxModule, SliderModule, RatingModule, DataTableModule
 } from 'primeng/primeng';
 import { BabnySideMenuComponent } from './babny/babny-side-menu/babny-side-menu.component';
 import { BabnyChartPieComponent } from './babny/babny-chart-pie/babny-chart-pie.component';
@@ -20,6 +20,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BabnyAddNameComponent } from './babny/babny-name/babny-add-name.component';
 import { BabnyFielderrorsComponent } from './babny/babny-fielderrors/babny-fielderrors.component';
 import { BabnySliderComponent } from './babny/widgets/babny-slider/babny-slider.component';
+import { BabnyNameGridComponent } from './babny/widgets/babny-name-grid/babny-name-grid.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { BabnySliderComponent } from './babny/widgets/babny-slider/babny-slider.
     BabnyChartPieComponent,
     BabnyAddNameComponent,
     BabnyFielderrorsComponent,
-    BabnySliderComponent
+    BabnySliderComponent,
+    BabnyNameGridComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +56,8 @@ import { BabnySliderComponent } from './babny/widgets/babny-slider/babny-slider.
     MultiSelectModule,
     ListboxModule,
     SliderModule,
-    RatingModule
+    RatingModule,
+    DataTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
