@@ -12,7 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MenuModule, PanelModule, ChartModule, InputTextModule, ButtonModule,
   InputMaskModule, InputTextareaModule, EditorModule, CalendarModule, RadioButtonModule, FieldsetModule,
-  DropdownModule, MultiSelectModule, ListboxModule, SliderModule, RatingModule, DataTableModule
+  DropdownModule, MultiSelectModule, ListboxModule, SliderModule, RatingModule, DataTableModule, TabViewModule
 } from 'primeng/primeng';
 import { BabnySideMenuComponent } from './babny/babny-side-menu/babny-side-menu.component';
 import { BabnyChartPieComponent } from './babny/babny-chart-pie/babny-chart-pie.component';
@@ -57,7 +57,8 @@ import { BabnyNameGridComponent } from './babny/widgets/babny-name-grid/babny-na
     ListboxModule,
     SliderModule,
     RatingModule,
-    DataTableModule
+    DataTableModule,
+    TabViewModule
   ],
   providers: [],
   bootstrap: [AppComponent]
