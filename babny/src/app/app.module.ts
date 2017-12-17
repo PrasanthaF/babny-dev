@@ -12,7 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MenuModule, PanelModule, ChartModule, InputTextModule, ButtonModule,
   InputMaskModule, InputTextareaModule, EditorModule, CalendarModule, RadioButtonModule, FieldsetModule,
-  DropdownModule, MultiSelectModule, ListboxModule, SliderModule, RatingModule, DataTableModule, TabViewModule
+  DropdownModule, MultiSelectModule, ListboxModule, SliderModule, RatingModule, DataTableModule, TabViewModule, TabMenuModule, MenuItem
 } from 'primeng/primeng';
 import { BabnySideMenuComponent } from './babny/babny-side-menu/babny-side-menu.component';
 import { BabnyChartPieComponent } from './babny/babny-chart-pie/babny-chart-pie.component';
@@ -21,6 +21,15 @@ import { BabnyAddNameComponent } from './babny/babny-name/babny-add-name.compone
 import { BabnyFielderrorsComponent } from './babny/babny-fielderrors/babny-fielderrors.component';
 import { BabnySliderComponent } from './babny/widgets/babny-slider/babny-slider.component';
 import { BabnyNameGridComponent } from './babny/widgets/babny-name-grid/babny-name-grid.component';
+import { BabnyMainTabMenuComponent } from './babny/babny-menu/babny-main-tab-menu/babny-main-tab-menu.component';
+import { Routes, RouterModule } from '@angular/router';
+
+const appRoutes: Routes = [
+  { path: "welcome", component: BabnyHomeComponent },
+  { path: '', redirectTo: 'welcome', pathMatch: 'full' },
+  { path: "babyname", component: BabnyAddNameComponent },
+  { path: "chart", component: BabnyChartPieComponent }
+];
 
 @NgModule({
   declarations: [
@@ -33,12 +42,14 @@ import { BabnyNameGridComponent } from './babny/widgets/babny-name-grid/babny-na
     BabnyAddNameComponent,
     BabnyFielderrorsComponent,
     BabnySliderComponent,
-    BabnyNameGridComponent
+    BabnyNameGridComponent,
+    BabnyMainTabMenuComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    RouterModule.forRoot(appRoutes),
     AppRoutingModule,
     BrowserAnimationsModule,
     MenuModule,
@@ -58,7 +69,8 @@ import { BabnyNameGridComponent } from './babny/widgets/babny-name-grid/babny-na
     SliderModule,
     RatingModule,
     DataTableModule,
-    TabViewModule
+    TabViewModule,
+    TabMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
