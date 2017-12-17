@@ -15,7 +15,7 @@ export class BabnyMainTabMenuComponent implements OnInit {
 
   ngOnInit() {
     this.items = [
-      {label: 'Stats', icon: 'fa-bar-chart', routerLink: ['/babyname']},
+      {label: 'By Name', icon: 'fa-bar-chart', routerLink: ['/welcome']},
       {label: 'Calendar', icon: 'fa-calendar'},
       {label: 'Documentation', icon: 'fa-book'},
       {label: 'Support', icon: 'fa-support'},

@@ -1,3 +1,4 @@
+<section class="container-fluid">
 <p-dataTable #dt [value]="allTimesheetData" class="ui-g-12" sortField="startTime" sortOrder="1" [reorderableColumns]="true"
   [globalFilter]="tableSearch" exportFilename="users" [editable]="true" [(selection)]="selectedRows" (onRowSelect)="onRowSelect($event)"
   [paginator]="true" [rows]="10" [rowsPerPageOptions]="[5,10,15,20]" [totalRecords]="recordCount" [pageLinks]="8">
@@ -28,3 +29,4 @@
   </p-footer>
 
 </p-dataTable>
+</section>
