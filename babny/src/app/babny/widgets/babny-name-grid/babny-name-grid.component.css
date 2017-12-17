@@ -1,4 +1,8 @@
-p-dataTable .ui-datatable-footer {
+.grid-container{
+    margin-top: 40px;
+}
+
+/* p-dataTable .ui-datatable-footer {
     min-height: 60px;
 }
 
@@ -14,4 +18,4 @@ p-dataTable .ui-datatable-footer {
 
 p-dataTable .selectBoxColumn {
     width: 43px;
-}
+} */

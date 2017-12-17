@@ -1,0 +1,8 @@
+body {
+    position: relative;
+}
+
+.title-row {
+    position: relative;
+    min-height: 100px;
+}
