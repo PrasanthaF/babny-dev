@@ -23,6 +23,8 @@ import { BabnySliderComponent } from './babny/widgets/babny-slider/babny-slider.
 import { BabnyNameGridComponent } from './babny/widgets/babny-name-grid/babny-name-grid.component';
 import { BabnyMainTabMenuComponent } from './babny/babny-menu/babny-main-tab-menu/babny-main-tab-menu.component';
 import { Routes, RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+
 
 const appRoutes: Routes = [
   { path: "welcome", component: BabnyHomeComponent },
@@ -52,6 +54,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     MenuModule,
     PanelModule,
     ChartModule,
