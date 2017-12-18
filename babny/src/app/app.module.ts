@@ -28,10 +28,10 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 const appRoutes: Routes = [
-  { path: "welcome", component: BabnyHomeComponent },
+  { path: 'welcome', component: BabnyHomeComponent },
   { path: '', redirectTo: 'welcome', pathMatch: 'full' },
-  { path: "babyname", component: BabnyAddNameComponent },
-  { path: "chart", component: BabnyChartPieComponent }
+  { path: 'babyname', component: BabnyAddNameComponent },
+  { path: 'chart', component: BabnyChartPieComponent }
 ];
 
 @NgModule({
@@ -46,7 +46,7 @@ const appRoutes: Routes = [
     BabnyFielderrorsComponent,
     BabnySliderComponent,
     BabnyNameGridComponent,
-    BabnyMultiViewComponent
+    BabnyMultiViewComponent,
     BabnyMainTabMenuComponent
   ],
   imports: [
