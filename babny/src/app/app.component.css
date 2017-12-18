@@ -1,0 +1,30 @@
+body {
+    position: relative;
+}
+
+.title-row {
+    position: relative;
+    min-height: 100px;
+}
+
+@media (max-width: 516px) {
+    .title-row {
+        position: relative;
+        min-height: 130px;
+    }
+}
+
+
+@media (max-width: 328px) {
+    .title-row {
+        position: relative;
+        min-height: 160px;
+    }
+}
+
+@media (max-width: 220px) {
+    .title-row {
+        position: relative;
+        min-height: 190px;
+    }
+}
