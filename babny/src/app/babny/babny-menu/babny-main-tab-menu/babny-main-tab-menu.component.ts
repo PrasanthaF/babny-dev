@@ -16,11 +16,10 @@ export class BabnyMainTabMenuComponent implements OnInit {
   ngOnInit() {
     this.items = [
       {label: 'By Name', icon: 'fa-bar-chart', routerLink: ['/welcome']},
-      {label: 'Calendar', icon: 'fa-calendar'},
-      {label: 'Documentation', icon: 'fa-book'},
-      {label: 'Support', icon: 'fa-support'},
-      {label: 'Social', icon: 'fa-twitter'}
+      {label: 'By Gender', icon: 'fa-calendar', routerLink: ['/welcome']},
+      {label: 'By Origin', icon: 'fa-book', routerLink: ['/welcome']},
+      {label: 'By Theme', icon: 'fa-support', routerLink: ['/welcome']}
   ];
-
+ 
   }
 }
