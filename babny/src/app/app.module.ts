@@ -21,6 +21,7 @@ import { BabnyAddNameComponent } from './babny/babny-name/babny-add-name.compone
 import { BabnyFielderrorsComponent } from './babny/babny-fielderrors/babny-fielderrors.component';
 import { BabnySliderComponent } from './babny/widgets/babny-slider/babny-slider.component';
 import { BabnyNameGridComponent } from './babny/widgets/babny-name-grid/babny-name-grid.component';
+import { BabnyMultiViewComponent } from './babny/babny-multi-view/babny-multi-view.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { BabnyNameGridComponent } from './babny/widgets/babny-name-grid/babny-na
     BabnyAddNameComponent,
     BabnyFielderrorsComponent,
     BabnySliderComponent,
-    BabnyNameGridComponent
+    BabnyNameGridComponent,
+    BabnyMultiViewComponent
   ],
   imports: [
     BrowserModule,
