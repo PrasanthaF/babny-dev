@@ -31,7 +31,8 @@ const appRoutes: Routes = [
   { path: 'welcome', component: BabnyHomeComponent },
   { path: '', redirectTo: 'welcome', pathMatch: 'full' },
   { path: 'babyname', component: BabnyAddNameComponent },
-  { path: 'chart', component: BabnyChartPieComponent }
+  { path: 'chart', component: BabnyChartPieComponent },
+  { path: 'multi', component: BabnyMultiViewComponent }
 ];
 
 @NgModule({
